@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="container section">
+    <p>ni hao</p>
     <h3>Hello, this is a public API to get location data in Indonesia</h3>
     <br>
     <h5>To use this api, you can get the data in two ways</h5>
