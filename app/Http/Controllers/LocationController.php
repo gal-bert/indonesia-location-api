@@ -18,7 +18,7 @@ class LocationController extends Controller
         if($limit == null) $limit = 80000;
 
         $query = DB::table('provinsi')
-            ->select('kelurahan.kelurahan_id', 'provinsi.name AS provinsi_name', 'kota.name  AS kota_name', 'kecamatan.name AS kecamatan_name', 'kelurahan.name AS kelurahan_name')
+            ->select('kelurahan.kelurahan_id AS id', 'provinsi.name AS provinsi', 'kota.name AS kota', 'kecamatan.name AS kecamatan', 'kelurahan.name AS kelurahan')
             ->join('kota', 'provinsi.provinsi_id', '=', 'kota.provinsi_id')
             ->join('kecamatan', 'kota.kota_id', '=', 'kecamatan.kota_id')
             ->join('kelurahan', 'kecamatan.kecamatan_id', '=', 'kelurahan.kecamatan_id')
@@ -36,7 +36,7 @@ class LocationController extends Controller
     public function province($province)
     {
         $query = DB::table('provinsi')
-            ->select('kelurahan.kelurahan_id', 'provinsi.name AS provinsi_name', 'kota.name  AS kota_name', 'kecamatan.name AS kecamatan_name', 'kelurahan.name AS kelurahan_name')
+            ->select('kelurahan.kelurahan_id AS id', 'provinsi.name AS provinsi', 'kota.name AS kota', 'kecamatan.name AS kecamatan', 'kelurahan.name AS kelurahan')
             ->join('kota', 'provinsi.provinsi_id', '=', 'kota.provinsi_id')
             ->join('kecamatan', 'kota.kota_id', '=', 'kecamatan.kota_id')
             ->join('kelurahan', 'kecamatan.kecamatan_id', '=', 'kelurahan.kecamatan_id')

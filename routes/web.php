@@ -14,5 +14,3 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [\App\Http\Controllers\LocationController::class, 'index']);
-Route::get('/all/{limit}/{offset}', [\App\Http\Controllers\LocationController::class, 'all']);
-Route::get('/province/{province}/', [\App\Http\Controllers\LocationController::class, 'province']);
